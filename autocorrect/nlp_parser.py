@@ -13,7 +13,7 @@ Author: Jonas McCallum
 https://github.com/foobarmus/autocorrect
 
 """
-from autocorrect.utils import words_from_archive, zero_default_dict
+from autocorrect.utils import words_from_archive, zero_default_dict,words_from_file,words_from_archive1
 
 def parse(lang_sample):
     """tally word popularity using novel extracts, etc"""
@@ -23,4 +23,14 @@ def parse(lang_sample):
         counts[word] += 1
     return set(words), counts
 
-NLP_WORDS, NLP_COUNTS = parse('big.txt')
+def parse1(lang_sample):
+    """tally word popularity using novel extracts, etc"""
+    words = words_from_archive1(lang_sample, include_dups=True)
+    counts = zero_default_dict()
+    for word in words:
+        counts[word] += 1
+    return set(words), counts
+
+#NLP_WORDS_1, NLP_COUNTS_1 = parse('big.txt')
+NLP_WORDS, NLP_COUNTS = parse1('bengnovasssh.txt')
+#NLP_WORDS, NLP_COUNTS = set(list(NLP_WORDS_1) + list(NLP_WORDS_2)), NLP_COUNTS_1

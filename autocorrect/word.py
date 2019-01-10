@@ -18,7 +18,7 @@ from autocorrect.nlp_parser import NLP_WORDS
 from autocorrect.word_lists import LOWERCASE, MIXED_CASE
 from autocorrect.word_lists import LOWERED, CASE_MAPPED
 
-ALPHABET = 'abcdefghijklmnopqrstuvwxyz'
+ALPHABET = '''abcdefghijklmnopqrstuvwxyzঅআইঈউঊঋঌএঐওঔকখগঘঙচছজঝঞটঠডঢণতথদধনপফবভময়সশষহযরড়ঢ়লৎঁংঃ্৷ািীুূৃেৈোৌ'''
 KNOWN_WORDS = LOWERCASE | LOWERED | NLP_WORDS
 
 class Word(object):

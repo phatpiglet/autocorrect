@@ -13,7 +13,7 @@ Author: Jonas McCallum
 https://github.com/foobarmus/autocorrect
 
 """
-from autocorrect.utils import words_from_archive
+from autocorrect.utils import words_from_archive,words_from_file,words_from_archive1
 
 # en_US_GB_CA is a superset of US, GB and CA
 # spellings (color, colour, etc). It contains
@@ -28,11 +28,12 @@ from autocorrect.utils import words_from_archive
 # via (lower)
 # Colombo (mixed)
 
-LOWERCASE = words_from_archive('en_US_GB_CA_lower.txt')
+#LOWERCASE = words_from_archive('en_US_GB_CA_lower.txt')
+LOWERCASE = words_from_archive1('bdict4.txt')
 # {'we', 'flew', 'to', 'via'}
-
-CASE_MAPPED = words_from_archive('en_US_GB_CA_mixed.txt',
-                                 map_case=True)
+#just add the list of words of the language which you wish to add with lowercase (if its devnagari type  only this will suffice)
+#CASE_MAPPED = words_from_archive('en_US_GB_CA_mixed.txt', map_case=True)
+CASE_MAPPED = {}
 #  {abu': 'Abu',
 #  'dhabi': 'Dhabi',
 #  'colombo': 'Colombo'}
