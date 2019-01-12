@@ -1,7 +1,7 @@
 ===========
 autocorrect
 ===========
-Python 3 Spelling Corrector
+Python 3 Spelling Corrector for bengali
 
 Installation
 ============
