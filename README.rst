@@ -1,8 +1,12 @@
 ===========
 autocorrect
 ===========
+<<<<<<< HEAD
 Python 3 Spelling Corrector
 Supports English and Bengali
+=======
+Python 3 Spelling Corrector for bengali
+>>>>>>> 1960f02eca6be6356bd4d35c690601bdf30c92d6
 
 Installation
 ============
