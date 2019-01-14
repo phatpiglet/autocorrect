@@ -12,7 +12,7 @@ Installation
 ============
 .. code-block:: bash
 
-    pip install autocorrect
+    pip install https://github.com/SubrataSarkar32/autocorrect.git
 
 Examples
 ========
