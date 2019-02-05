@@ -1,13 +1,18 @@
 ===========
 autocorrect
 ===========
+
 Python 3 Spelling Corrector
+Supports English and Bengali
+=======
+Python 3 Spelling Corrector for bengali
+
 
 Installation
 ============
 .. code-block:: bash
 
-    pip install autocorrect
+    pip install https://github.com/SubrataSarkar32/autocorrect.git
 
 Examples
 ========
@@ -16,6 +21,8 @@ Examples
     >>> from autocorrect import spell
     >>> spell('HTe')
     'The'
+    #for bengali
+    >>> spell('কখন',language='bn')
 
 Contribute
 ==========
