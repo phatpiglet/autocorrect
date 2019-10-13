@@ -15,6 +15,12 @@ https://github.com/foobarmus/autocorrect
 """
 from autocorrect.nlp_parser import NLP_COUNTS
 from autocorrect.word import Word, common, exact, known, get_case
+import re
+
+special_chars = ['.', ',', '!', '?', ';', ':']
+"""these are the same characters used in the function GetWords"""
+def getWords(data):
+    return re.findall(r"[\w']+|[.,!?;:]",data)
 
 def spell(word):
     """most likely correction for everything up to a double typo"""
@@ -24,3 +30,17 @@ def spell(word):
                   [word])
     correction = max(candidates, key=NLP_COUNTS.get)
     return get_case(word, correction)
+
+def spell_sentence(sentence):
+    """We essentially take each word out, and pass through the spell function
+    And later append it into an empty stringself.
+    Special characters are not passed through the spell function."""
+    words = getWords(sentence)
+    sentence = ''
+    for word in words:
+        if word in special_chars:
+            sentence = sentence[:-1]
+            sentence = sentence + word + ' '
+        else:
+            sentence = sentence + spell(word) + ' '
+    return sentence
