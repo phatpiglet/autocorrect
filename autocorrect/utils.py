@@ -13,20 +13,19 @@ Author: Jonas McCallum
 https://github.com/foobarmus/autocorrect
 
 """
-import re, os, tarfile
+import re, os, zipfile
 from contextlib import closing
 from itertools import chain
 
 PATH = os.path.abspath(os.path.dirname(__file__))
-BZ2 = 'words.bz2'
+ZIP = 'words.zip'
 RE = '[A-Za-z]+'
 
 def words_from_archive(filename, include_dups=False, map_case=False):
     """extract words from a text file in the archive"""
-    bz2 = os.path.join(PATH, BZ2)
-    tar_path = '{}/{}'.format('words', filename)
-    with closing(tarfile.open(bz2, 'r:bz2')) as t:
-        with closing(t.extractfile(tar_path)) as f:
+    zip = os.path.join(PATH, ZIP)
+    with closing(zipfile.ZipFile(zip)) as t:
+        with closing(t.open(filename)) as f:
             words = re.findall(RE, f.read().decode(encoding='utf-8'))
     if include_dups:
         return words
