@@ -31,6 +31,6 @@ def parse1(lang_sample):
         counts[word] += 1
     return set(words), counts
 
-#NLP_WORDS_1, NLP_COUNTS_1 = parse('big.txt')
-NLP_WORDS, NLP_COUNTS = parse1('bengnovasssh.txt')
+NLP_WORDS, NLP_COUNTS = parse('big.txt')
+#NLP_WORDS, NLP_COUNTS = parse1('bengnovasssh.txt')
 #NLP_WORDS, NLP_COUNTS = set(list(NLP_WORDS_1) + list(NLP_WORDS_2)), NLP_COUNTS_1

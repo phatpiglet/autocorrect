@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: autocorrect
+Version: 0.3.0
+Summary: Python 3 Spelling Corrector
+Home-page: https://github.com/phatpiglet/autocorrect/
+Author: Jonas McCallum
+Author-email: jonasmccallum@gmail.com
+License: http://www.opensource.org/licenses/mit-license.php
+Keywords: autocorrect spelling corrector
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSE

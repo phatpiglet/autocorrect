@@ -1,0 +1,15 @@
+LICENSE
+README.rst
+setup.py
+autocorrect/__init__.py
+autocorrect/nlp_parser.py
+autocorrect/nlp_parser_bn.py
+autocorrect/utils.py
+autocorrect/word.py
+autocorrect/word_lists.py
+autocorrect/word_lists_bn.py
+autocorrect/words.bz2
+autocorrect.egg-info/PKG-INFO
+autocorrect.egg-info/SOURCES.txt
+autocorrect.egg-info/dependency_links.txt
+autocorrect.egg-info/top_level.txt
